@@ -1,0 +1,150 @@
+/* Global Styles */
+html {
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+}
+*,*::before,*::after{
+    box-sizing: inherit; 
+    margin: 0;
+}
+a{
+    color:rgb(209, 102, 166);
+}
+a:hover {
+    color:rgb(196, 150, 42);
+}
+.btn {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    
+}
+
+
+/* Index styles */
+.home {
+     background: url(/images/bg-home-office-bookshelf.jpg) no-repeat;
+     background-size: cover;
+     display: flex;
+     flex-direction: column;
+}
+.home .content-bg{
+ background-color: #F5F5F5;
+ padding: 30px;
+}
+.home .content-wrapper {
+    margin:0 auto;
+    max-width:900px;
+    padding:30px;
+    flex-grow:1;
+}
+
+/* Resume styles */
+.resume header::before{
+    background: url(/images/bg-home-office-bookshelf.jpg) center/cover;
+    display: block;
+    content:"";
+    height: 400px;
+}
+.resume-section{
+    margin-bottom: 50px;
+}
+.resume-section h2{
+    border-bottom: 2px dashed rgb(144, 131, 131);
+}
+.download-link{
+    position:fixed;
+    top:5px;
+    left:5px;
+}
+/* profile */
+
+/* projects */
+.project-item img{
+    float:left;
+    width: 400px; 
+    margin-right: 20px;    
+
+}
+.project-item {
+    display: flow-root;
+    margin: 20px 0;
+}
+
+/* work experience */
+
+/* education */
+.resume-section .education{
+    display:flex;
+    padding-right: 75px;
+    min-width: 900px;
+}
+ .school {
+    box-sizing: border-box;
+    flex-basis: 200px;
+}
+
+/* foorer */
+footer {
+    background-color:#2f4f4fb1;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+}
+.socials img {
+  width: 80px;
+}
+
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.socials img.gif {
+  opacity: 0;
+}
+
+.socials a:hover img.static {
+  opacity: 0;
+}
+
+.socials a:hover img.gif {
+  opacity: 1;
+}
+.socials{
+    list-style: none;
+}
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.socials li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.socials li img.gif {
+  opacity: 0;
+}
+
+.socials li:hover img.static {
+  opacity: 0;
+}
+
+.socials li:hover img.gif {
+  opacity: 1;
+}
