@@ -1,150 +1,237 @@
 /* Global Styles */
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
-html,body {
+html, body {
     height: 100%;
 }
-*,*::before,*::after{
-    box-sizing: inherit; 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background: #1a120b;
     margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #e5e5db;
 }
-a{
-    color:rgb(209, 102, 166);
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin: 0;
+    color: #c19d6a;
+    letter-spacing: 0.05em;
 }
-a:hover {
-    color:rgb(196, 150, 42);
+h1 {
+    font-size: 6.5rem;
+    line-height: 0.9;
 }
-.btn {
-    background-color: green;
-    color: white;
+h2 {
+    font-size: 3.8rem;
+}
+h3 {
+    font-size: 2.6rem;
+}
+a {
+    color: #8b0000;
     text-decoration: none;
 }
+a:hover {
+    color: #daa520;
+}
+.btn {
+    background: #2d2421;
+    color: #c19d6a !important;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 8px 14px;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    border-radius: 5px;
+    border: 1px solid #c19d6a;
+}
 
+/* Layout */
 .content-wrapper {
     margin: 0 auto;
+    padding: 30px;
     max-width: 900px;
-    
 }
 
-
-/* Index styles */
+/* Index Styles */
 .home {
-     background: url(../images/bg-home-office-bookshelf.jpg) no-repeat;
-     background-size: cover;
-     display: flex;
-     flex-direction: column;
+    background: url(../images/bg-home-office-bookshelf.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
-.home .content-bg{
- background-color: #F5F5F5;
- padding: 30px;
+.content-bg {
+    background-color: rgba(26, 18, 11, 0.9);
+    padding: 30px;
 }
 .home .content-wrapper {
-    margin:0 auto;
-    max-width:900px;
-    padding:30px;
-    flex-grow:1;
+    flex: 1 0 auto;
+}
+@media screen and (max-width: 580px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
 }
 
-/* Resume styles */
-.resume header::before{
-    background: url(../images/bg-home-office-bookshelf.jpg) center/cover;
+/* Resume Styles */
+.resume header::before {
+    background: url(../images/bg-home-office-bookshelf.jpg) center;
+    background-size: cover;
     display: block;
-    content:"";
-    height: 400px;
+    content: "";
+    height: 375px;
+    filter: sepia(0.4) contrast(1.1);
 }
-.resume-section{
+.resume-section {
     margin-bottom: 50px;
 }
-.resume-section h2{
-    border-bottom: 2px dashed rgb(144, 131, 131);
+.resume-section h2 {
+    border-bottom: 2px dashed #4e443b;
 }
-.download-link{
-    position:fixed;
-    top:5px;
-    left:5px;
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
 }
-/* profile */
+@media screen and (max-width: 1200px) {
+    .download-link {
+        position: absolute;
+    }
+}
+@media screen and (max-width: 580px) {
+    .resume header::before {
+        height: 200px;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
 
-/* projects */
-.project-item img{
-    float:left;
-    width: 400px; 
-    margin-right: 20px;    
-
-}
+/* Projects */
 .project-item {
-    display: flow-root;
-    margin: 20px 0;
+    margin: 30px 0;
+    border-bottom: 1px dashed #4e443b;
+    padding-bottom: 20px;
+}
+.project-item img {
+    width: 300px;
+}
+@media screen and (min-width: 860px) {
+    .project-item {
+        display: flow-root;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 650px) and (max-width: 859px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    .project-item img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
-/* work experience */
-
-/* education */
-.resume-section .education{
-    display:flex;
-    padding-right: 75px;
-    min-width: 900px;
+/* Work Experience */
+.work-item {
+    margin: 30px 0;
+    background: #2d2421;
+    padding: 15px;
+    border-left: 3px solid #8b0000;
 }
- .school {
-    box-sizing: border-box;
-    flex-basis: 200px;
+.work-details p {
+    margin: 0;
+}
+@media screen and (min-width: 860px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+    .work-summary :first-child {
+        margin-top: 0;
+    }
 }
 
-/* foorer */
+/* Education */
+.education-item {
+    margin: 30px 0;
+}
+.education-item p {
+    margin: 0;
+}
+
+/* Footer */
 footer {
-    background-color:#2f4f4fb1;
-    color: #F5F5F5;
+    background-color: #0a0806;
+    color: #c19d6a;
     display: flex;
     justify-content: space-between;
     padding-inline: 20px;
+    border-top: 3px solid #8b0000;
 }
-.socials img {
-  width: 80px;
-}
-
-.socials li {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.socials img.gif {
-  opacity: 0;
-}
-
-.socials a:hover img.static {
-  opacity: 0;
-}
-
-.socials a:hover img.gif {
-  opacity: 1;
-}
-.socials{
+.socials {
     list-style: none;
 }
 .socials li {
-  display: inline-block;
-  margin-left: 10px;
-  position: relative;
-  width: 80px;
-  height: 80px;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
-
 .socials li img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .socials li img.gif {
-  opacity: 0;
+    opacity: 0;
 }
-
 .socials li:hover img.static {
-  opacity: 0;
+    opacity: 0;
 }
-
 .socials li:hover img.gif {
-  opacity: 1;
+    opacity: 1;
+    filter: none;
+}
+@media screen and (min-width: 860px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 859px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
 }
