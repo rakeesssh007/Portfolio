@@ -30,7 +30,7 @@ a:hover {
 
 /* Index styles */
 .home {
-     background: url(images\bg-home-office-bookshelf.jpg) no-repeat;
+     background: url(..\images\bg-home-office-bookshelf.jpg) no-repeat;
      background-size: cover;
      display: flex;
      flex-direction: column;
@@ -48,7 +48,7 @@ a:hover {
 
 /* Resume styles */
 .resume header::before{
-    background: url(images\bg-home-office-bookshelf.jpg) center/cover;
+    background: url(..\images\bg-home-office-bookshelf.jpg) center/cover;
     display: block;
     content:"";
     height: 400px;
